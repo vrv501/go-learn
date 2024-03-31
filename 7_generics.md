@@ -14,6 +14,7 @@
   ```go
   func myfuncName[T comparable](arg1 []T, arg2 T) { // you might wonder why cant we use any here
                                                     // you can however that also means you have to do type assertions and ony then you can use == & !=
+                                                    // == and != will panic if both operands are different dataTypes which is why we use type assertions
                                                     // whereas with comparable you can directly start using == & != only
                                                     // its still ok to use any depending on usecase
 
