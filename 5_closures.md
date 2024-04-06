@@ -21,3 +21,4 @@
   }                
   ```
 - if multiple closure is accessing pkg level variable, they are all get same refernce to the pkg level variable, not copies. So careful when using closures
+- one good use of deferring closures is to dyncamically update named returns of a function since any return of defreed fucntionc annot be accessed, we can combine these two concepts to get results of deferred function
