@@ -2,12 +2,13 @@
   ```
   func(a myType) functinName(){}
   ```
-- Any method has to be defined on a type. type can be anything that's not part of stdlib or other packages
+- Any method has to be defined on a type. type can be anything that's not part of stdlib or other packages or that's not defined(has to be xplicity defined using type not inline(ex: map[int]any))
   ```go
   type myInt int
   type Circle struct{}
   ```
   In the above example you can create methods for myInt, Circle but not for int, struct
+- Keep in mind if you declare your onw type on an inbuilt type, it doesn't inherit the original type's methods - no inheritance in go 😄
 - If you're type is implementing a interface and you want to ensure it always implements interface and accidentally prevent issues in runtime, you can use below to handle errors at compile time   
   ```go
   var _ InterfaceName = (*typeName)(nil) // assuming *typeName implements interface

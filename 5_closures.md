@@ -20,3 +20,4 @@
     }   
   }                
   ```
+- if multiple closure is accessing pkg level variable, they are all get same refernce to the pkg level variable, not copies. So careful when using closures

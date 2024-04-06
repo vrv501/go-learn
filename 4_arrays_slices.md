@@ -1,6 +1,6 @@
 - all arrays unlike C are fixed composite types. So when you say `x := [4]int{}` it literally means x is one whole composite(ncludes all 4 memory allocations & locations)  
   so if you assign array to some other var it lietrally copies everything
-- slice is reference to an uderlying array. It has capacity(number of elemnts in underlying array) & length(number of elemnts in slice)   
+- slice is **reference** to an uderlying array. It has capacity(number of elemnts in underlying array) & length(number of elemnts in slice)   
   ```
                                                         _ _ _ _ _ _ _
   array ---------------------------------------------> |_|_|_|_|_|_|_|
@@ -30,3 +30,4 @@
 - zero value of slice is nil with len0 & cap 0
 - append to any slice will interanlly take care to increase capacity
 - a fucntion arg with `funcName(arg ...int)` - here arg will be slice of type int
+- both maps & slices are refernces to their underlying implementations. SO if you pass them as args to funcitons, or assign them to another variable, know that anymodifications will afect them all!!!!
