@@ -1,6 +1,6 @@
 - defer evaluates once fucntion around it is done. defer calls are stacked(LIFO)
 - A deferred function's arguments are evaluated when the defer statement is evaluated.(not execution, evaluation)   
-  evaluation of args - in the current routine they are decided and bound to defer func, but defer func will not be executed
+  evaluation of args - in the current routine they are decided and bound to defer func, but defer func will not be executed. This is also true for go-routines. Any arguments to go-routines are evaluated immediately, but go-routine may not be immediately executed
   ```go
   func a() {
     i := 0
